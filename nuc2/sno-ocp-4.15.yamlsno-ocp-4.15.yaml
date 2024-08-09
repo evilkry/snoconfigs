@@ -1,0 +1,21 @@
+cluster:
+  name: sno-ocp-415
+  cluster-cidr: 10.100.0.0/14
+  service-cidr: 172.30.0.0/16
+  remote-registry: quay.io/openshift-release-dev/ocp-release
+  tools-uri: quay.io/openshift-release-dev/ocp-release
+  butane-version: v0.20.0
+  butane-spec-version: 1.5.0
+  butane-variant: fcos
+  nmstatectl-version: v2.2.27
+  disconnected: "false"
+  release-type: ocp
+  release: 4.15.21-x86_64
+control-plane:
+  metal: true
+  boot-dev: /dev/disk/by-path/pci-0000:17.0-ata-3.0
+  hostpath-dev: /dev/disk/by-path/pci-0000:17.0-ata-2.0
+  nodes:
+    - ip-addr: 10.11.12.100
+      mac-addr: 94:c6:91:a3:84:6b
+      name: sno-ocp-415-cp-0
